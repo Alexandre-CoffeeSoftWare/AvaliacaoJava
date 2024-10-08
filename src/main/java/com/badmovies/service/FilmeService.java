@@ -2,6 +2,7 @@ package com.badmovies.service;
 
 import com.badmovies.models.Filme;
 import com.badmovies.models.Produtor;
+import com.badmovies.models.IntervaloPremio;
 import com.badmovies.utils.Result;
 import com.badmovies.repository.FilmeRepository;
 import com.badmovies.repository.LeituraCsv;
@@ -11,6 +12,7 @@ import org.springframework.beans.factory.annotation.Value;
 import jakarta.annotation.PostConstruct;
 
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class FilmeService {
@@ -46,6 +48,8 @@ public class FilmeService {
     public Produtor retornarPremiadoMaiorIntervalo() { return filmeUtilsService.retornarPremiadoMaiorIntervalo(); }
 
     public Produtor retornarPremiadoMenorIntervalo() { return filmeUtilsService.retornarPremiadoMenorIntervalo(); }
+
+    public Map<String, List<IntervaloPremio>> retornarIntervalosMinEMax() { return filmeUtilsService.retornarIntervalosMinEMax(); }
 
     public List<Filme> listarFilmePorAno(int ano) {
         return filmeRepository.findByAno(ano);

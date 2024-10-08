@@ -1,6 +1,7 @@
 package com.badmovies.controller;
 
 import com.badmovies.models.Filme;
+import com.badmovies.models.IntervaloPremio;
 import com.badmovies.models.Produtor;
 import com.badmovies.utils.Result;
 import com.badmovies.service.FilmeService;
@@ -8,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/filmes")
@@ -34,6 +36,9 @@ public class FilmeController {
 
     @GetMapping("/premiadomenorintervalo")
     public Produtor retornarPremiadoMenorIntervalo() { return  filmeService.retornarPremiadoMenorIntervalo(); }
+
+    @GetMapping("/todosintervalos")
+    public Map<String, List<IntervaloPremio>> retornarIntervalosMinEMax() { return filmeService.retornarIntervalosMinEMax(); }
 
     @PostMapping
     public Filme adicionarFilme(@RequestBody Filme filme) { return filmeService.adicionarFilme(filme); }

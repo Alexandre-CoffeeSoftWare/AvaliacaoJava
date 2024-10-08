@@ -1,7 +1,6 @@
 package com.badmovies.service;
 
-import com.badmovies.models.Filme;
-import com.badmovies.models.Produtor;
+import com.badmovies.models.*;
 import com.badmovies.utils.Result;
 import com.badmovies.repository.FilmeRepository;
 import org.springframework.beans.BeanUtils;
@@ -88,5 +87,48 @@ public class FilmeUtilsService {
         } else {
             return null;
         }
+    }
+
+    public Map<String, List<IntervaloPremio>> retornarIntervalosMinEMax() {
+        List<Filme> filmes = filmeRepository.findVencedoresOrdenadosPorProdutorEAno();
+        Map<String, List<IntervaloPremio>> resultado = new HashMap<>();
+        List<IntervaloPremio> intervalosMin = new ArrayList<>();
+        List<IntervaloPremio> intervalosMax = new ArrayList<>();
+        Map<String, Integer> ultimoAnoPremiado = new HashMap<>();
+
+        int menorIntervalo = Integer.MAX_VALUE;
+        int maiorIntervalo = Integer.MIN_VALUE;
+
+        for (Filme filme : filmes) {
+            String produtor = filme.getProdutor();
+            int anoAtual = filme.getAno();
+
+            if (ultimoAnoPremiado.containsKey(produtor)) {
+                int anoAnterior = ultimoAnoPremiado.get(produtor);
+                int intervalo = anoAtual - anoAnterior;
+
+                if (intervalo < menorIntervalo) {
+                    intervalosMin.clear();
+                    intervalosMin.add(new IntervaloPremio(produtor, intervalo, anoAnterior, anoAtual));
+                    menorIntervalo = intervalo;
+                } else if (intervalo == menorIntervalo) {
+                    intervalosMin.add(new IntervaloPremio(produtor, intervalo, anoAnterior, anoAtual));
+                }
+
+                if (intervalo > maiorIntervalo) {
+                    intervalosMax.clear();
+                    intervalosMax.add(new IntervaloPremio(produtor, intervalo, anoAnterior, anoAtual));
+                    maiorIntervalo = intervalo;
+                } else if (intervalo == maiorIntervalo) {
+                    intervalosMax.add(new IntervaloPremio(produtor, intervalo, anoAnterior, anoAtual));
+                }
+            }
+
+            ultimoAnoPremiado.put(produtor, anoAtual);
+        }
+
+        resultado.put("min", intervalosMin);
+        resultado.put("max", intervalosMax);
+        return resultado;
     }
 }
