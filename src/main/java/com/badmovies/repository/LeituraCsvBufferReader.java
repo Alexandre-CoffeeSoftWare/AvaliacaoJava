@@ -23,14 +23,16 @@ public class LeituraCsvBufferReader implements LeituraCsv {
             String linha = reader.readLine();
             while ((linha = reader.readLine()) != null) {
                 String[] dados = linha.split(";", 5);
-                Filme filme = new Filme();
-                filme.setAno(Integer.parseInt(dados[0]));
-                filme.setTitulo(dados[1]);
-                filme.setEstudio(dados[2]);
-                filme.setProdutor(dados[3]);
-                filme.setVencedor(Boolean.parseBoolean(String.valueOf(dados[4].equals("yes"))));
-
-                filmes.add(filme);
+                var produtores = dados[3].replace(" and ",",").split(",");                
+                for(var produtor: produtores) {
+                    Filme filme = new Filme();
+                    filme.setAno(Integer.parseInt(dados[0]));
+                    filme.setTitulo(dados[1]);
+                    filme.setEstudio(dados[2]);
+                    filme.setProdutor(produtor.trim());
+                    filme.setVencedor(Boolean.parseBoolean(String.valueOf(dados[4].equals("yes"))));
+                    filmes.add(filme);
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();

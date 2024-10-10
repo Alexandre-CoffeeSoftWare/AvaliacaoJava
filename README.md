@@ -39,19 +39,20 @@ URL: http://localhost:8080/api/filmes/vencedores
 
 Filtrar por Ano
 Método: GET
-URL: http://localhost:8080/api/filmes/filmeporano
+Parametro: ano
+URL: http://localhost:8080/api/filmes/filmeporano?ano=1980
 
 Maior Intervalo de Tempo entre Prêmios
 Método: GET
-URL: http://localhost:8080/api/filmes/filmeporano/premiadodemaiorintervalo
+URL: http://localhost:8080/api/filmes/premiadodemaiorintervalo
 
 Menor Intervalo de Tempo entre Prêmios
 Método: GET
-URL: http://localhost:8080/api/filmes/filmeporano/premiadomenorintervalo
+URL: http://localhost:8080/api/filmes/premiadomenorintervalo
 
 Menor Maior e menor vencedor por intervalo de tempo
 Método: GET
-URL: http://localhost:8080/api/filmes/filmeporano/todosintervalos
+URL: http://localhost:8080/api/filmes/todosintervalos
 
 Inserção de Filmes
 Método: POST
