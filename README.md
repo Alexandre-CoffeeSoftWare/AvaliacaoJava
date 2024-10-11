@@ -93,9 +93,9 @@ Método: DELETE
 URL: http://localhost:8080/api/filmes/{id}
 ```
 
-```bash
-Executando os Testes
+## Executando os Testes
 Para rodar os testes diretamente pela linha de comando no IntelliJ, execute o seguinte comando:
+```bash
 comandos:
 ./gradlew test
 ```
