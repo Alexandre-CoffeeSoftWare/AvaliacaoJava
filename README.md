@@ -66,8 +66,9 @@ http://localhost:8080/api/filmes/premiadomenorintervalo
 
 ## Maior e Menor vencedor por intervalo de tempo
 Método: GET <br>
+URL:
 ```bash
-URL: http://localhost:8080/api/filmes/todosintervalos
+http://localhost:8080/api/filmes/todosintervalos
 ```
 
 ## Inserção de Filmes
