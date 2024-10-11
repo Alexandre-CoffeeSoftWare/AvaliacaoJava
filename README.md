@@ -6,7 +6,7 @@ Este projeto utiliza Gradle, pois é mais simples para um projeto de menor porte
 
 ## Índice
 - [Sobre o Projeto](#sobre-o-projeto)
-- [Instalação e Configuração](#instalacao-e-configuracao)
+- [Instalação e Configuração](#instalação-e-configuração)
 - [Utilização da API](#utilizacao-da-api)
   - [Listar Filmes](#listar-filmes)
   - [Filmes Vencedores](#filmes-vencedores)
@@ -25,11 +25,11 @@ Este projeto foi desenvolvido como parte de uma avaliação para demonstrar conh
 ## Instalação e Configuração
 Para rodar este projeto, é necessário ter o Gradle instalado. Após clonar o repositório, entre na pasta do projeto e instale as dependências necessárias:
 
-```bash
-Utilização da API
+## Utilização da API
 A API possui os seguintes endpoints para interagir com o sistema de filmes:
 
-Listar Filmes
+## Listar Filmes
+```bash
 Método: GET
 URL: http://localhost:8080/api/filmes
 
