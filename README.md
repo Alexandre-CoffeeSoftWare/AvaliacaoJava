@@ -7,15 +7,15 @@ Este projeto utiliza Gradle, pois é mais simples para um projeto de menor porte
 ## Índice
 - [Sobre o Projeto](#sobre-o-projeto)
 - [Instalação e Configuração](#instalação-e-configuração)
-- [Utilização da API](#utilizacao-da-api)
+- [Utilização da API](#utilização-da-api)
   - [Listar Filmes](#listar-filmes)
   - [Filmes Vencedores](#filmes-vencedores)
   - [Filtrar por Ano](#filtrar-por-ano)
   - [Maior Intervalo de Tempo entre Prêmios](#maior-intervalo-de-tempo-entre-premios)
   - [Menor Intervalo de Tempo entre Prêmios](#menor-intervalo-de-tempo-entre-premios)
-  - [Maior vencedor e menor vencedor de Prêmios](#todos-intervalos)
+  - [Maior vencedor e menor vencedor de Prêmios](#maior-e-menor-vencedor-por-intervalo-de-tempo)
   - [Inserção de Filmes](#insercao-de-filmes)
-  - [Atualização de Filmes](#atualizacao-de-filmes)
+  - [Atualização de Filmes](#atualização-de-filmes)
   - [Deleção de Filmes](#deleção-de-filmes)
 - [Executando os Testes](#executando-os-testes)
 
@@ -32,29 +32,41 @@ A API possui os seguintes endpoints para interagir com o sistema de filmes:
 ```bash
 Método: GET
 URL: http://localhost:8080/api/filmes
+```
 
-Filmes Vencedores
+## Filmes Vencedores
+```bash
 Método: GET
 URL: http://localhost:8080/api/filmes/vencedores
+```
 
-Filtrar por Ano
+## Filtrar por Ano
+```bash
 Método: GET
 Parametro: ano
 URL: http://localhost:8080/api/filmes/filmeporano?ano=1980
+```
 
-Maior Intervalo de Tempo entre Prêmios
+## Maior Intervalo de Tempo entre Prêmios
+```bash
 Método: GET
 URL: http://localhost:8080/api/filmes/premiadodemaiorintervalo
+```
 
-Menor Intervalo de Tempo entre Prêmios
+## Menor Intervalo de Tempo entre Prêmios
+```bash
 Método: GET
 URL: http://localhost:8080/api/filmes/premiadomenorintervalo
+```
 
-Menor Maior e menor vencedor por intervalo de tempo
+## Maior e Menor vencedor por intervalo de tempo
+```bash
 Método: GET
 URL: http://localhost:8080/api/filmes/todosintervalos
+```
 
-Inserção de Filmes
+## Inserção de Filmes
+```bash
 Método: POST
 URL: http://localhost:8080/api/filmes
 Request Body:
@@ -69,8 +81,8 @@ Request Body:
 }
 ```
 
+## Atualização de Filmes
 ```bash
-Atualização de Filmes
 Método: PUT
 URL: http://localhost:8080/api/filmes/{id}
 Request Body:
@@ -85,8 +97,8 @@ Request Body:
 }
 ```
 
+## Deleção de Filmes
 ```bash
-Deleção de Filmes
 Método: DELETE
 URL: http://localhost:8080/api/filmes/{id}
 ```
