@@ -13,7 +13,7 @@ Este projeto utiliza Gradle, pois é mais simples para um projeto de menor porte
   - [Filtrar por Ano](#filtrar-por-ano)
   - [Maior Intervalo de Tempo entre Prêmios](#maior-intervalo-de-tempo-entre-premios)
   - [Menor Intervalo de Tempo entre Prêmios](#menor-intervalo-de-tempo-entre-premios)
-  - [Maior vencedor e menor vencedor de Prêmios] (#todos-intervalos)
+  - [Maior vencedor e menor vencedor de Prêmios](#todos-intervalos)
   - [Inserção de Filmes](#insercao-de-filmes)
   - [Atualização de Filmes](#atualizacao-de-filmes)
   - [Deleção de Filmes](#deleção-de-filmes)

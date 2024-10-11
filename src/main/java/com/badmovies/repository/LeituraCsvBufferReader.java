@@ -23,7 +23,7 @@ public class LeituraCsvBufferReader implements LeituraCsv {
             String linha = reader.readLine();
             while ((linha = reader.readLine()) != null) {
                 String[] dados = linha.split(";", 5);
-                var produtores = dados[3].replace(" and ",",").split(",");                
+                var produtores = dados[3].replace(" and ",",").split(",");
                 for(var produtor: produtores) {
                     Filme filme = new Filme();
                     filme.setAno(Integer.parseInt(dados[0]));
