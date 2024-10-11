@@ -29,49 +29,49 @@ Para rodar este projeto, é necessário ter o Gradle instalado. Após clonar o r
 A API possui os seguintes endpoints para interagir com o sistema de filmes:
 
 ## Listar Filmes
-Método: GET
-URL:
+Método: GET <br>
+URL: 
 ```bash
 http://localhost:8080/api/filmes
 ```
 
 ## Filmes Vencedores
-Método: GET
+Método: GET <br>
 URL:
 ```bash
 http://localhost:8080/api/filmes/vencedores
 ```
 
 ## Filtrar por Ano
-Método: GET
-Parametro: ano
+Método: GET <br>
+Parametro: ano <br>
 URL:
 ```bash
 http://localhost:8080/api/filmes/filmeporano?ano=1980
 ```
 
 ## Maior Intervalo de Tempo entre Prêmios
-Método: GET
+Método: GET <br>
 URL:
 ```bash
 http://localhost:8080/api/filmes/premiadodemaiorintervalo
 ```
 
 ## Menor Intervalo de Tempo entre Prêmios
-Método: GET
+Método: GET <br>
 URL:
 ```bash
 http://localhost:8080/api/filmes/premiadomenorintervalo
 ```
 
 ## Maior e Menor vencedor por intervalo de tempo
-Método: GET
+Método: GET <br>
 ```bash
 URL: http://localhost:8080/api/filmes/todosintervalos
 ```
 
 ## Inserção de Filmes
-Método: POST
+Método: POST <br>
 URL:
 ```bash
 http://localhost:8080/api/filmes
@@ -88,7 +88,7 @@ Request Body:
 ```
 
 ## Atualização de Filmes
-Método: PUT
+Método: PUT <br>
 URL:
 ```bash
 http://localhost:8080/api/filmes/{id}
@@ -105,7 +105,7 @@ Request Body:
 ```
 
 ## Deleção de Filmes
-Método: DELETE
+Método: DELETE <br>
 URL:
 ```bash
 http://localhost:8080/api/filmes/{id}
@@ -113,7 +113,6 @@ http://localhost:8080/api/filmes/{id}
 
 ## Executando os Testes
 Para rodar os testes diretamente pela linha de comando no IntelliJ, execute o seguinte comando:
-comandos:
 ```bash
 ./gradlew test
 ```
