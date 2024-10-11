@@ -30,33 +30,38 @@ A API possui os seguintes endpoints para interagir com o sistema de filmes:
 
 ## Listar Filmes
 Método: GET
+URL:
 ```bash
-URL: http://localhost:8080/api/filmes
+http://localhost:8080/api/filmes
 ```
 
 ## Filmes Vencedores
 Método: GET
+URL:
 ```bash
-URL: http://localhost:8080/api/filmes/vencedores
+http://localhost:8080/api/filmes/vencedores
 ```
 
 ## Filtrar por Ano
 Método: GET
 Parametro: ano
+URL:
 ```bash
-URL: http://localhost:8080/api/filmes/filmeporano?ano=1980
+http://localhost:8080/api/filmes/filmeporano?ano=1980
 ```
 
 ## Maior Intervalo de Tempo entre Prêmios
 Método: GET
+URL:
 ```bash
-URL: http://localhost:8080/api/filmes/premiadodemaiorintervalo
+http://localhost:8080/api/filmes/premiadodemaiorintervalo
 ```
 
 ## Menor Intervalo de Tempo entre Prêmios
 Método: GET
+URL:
 ```bash
-URL: http://localhost:8080/api/filmes/premiadomenorintervalo
+http://localhost:8080/api/filmes/premiadomenorintervalo
 ```
 
 ## Maior e Menor vencedor por intervalo de tempo
@@ -67,10 +72,11 @@ URL: http://localhost:8080/api/filmes/todosintervalos
 
 ## Inserção de Filmes
 Método: POST
+URL:
 ```bash
-URL: http://localhost:8080/api/filmes
-Request Body:
+http://localhost:8080/api/filmes
 ```
+Request Body:
 ```json
 {
     "ano": 1980,
@@ -83,10 +89,11 @@ Request Body:
 
 ## Atualização de Filmes
 Método: PUT
+URL:
 ```bash
-URL: http://localhost:8080/api/filmes/{id}
-Request Body:
+http://localhost:8080/api/filmes/{id}
 ```
+Request Body:
 ```json
 {
     "ano": 1980,
@@ -99,8 +106,9 @@ Request Body:
 
 ## Deleção de Filmes
 Método: DELETE
+URL:
 ```bash
-URL: http://localhost:8080/api/filmes/{id}
+http://localhost:8080/api/filmes/{id}
 ```
 
 ## Executando os Testes
