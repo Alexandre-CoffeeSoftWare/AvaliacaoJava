@@ -60,7 +60,6 @@ URL: http://localhost:8080/api/filmes
 Request Body:
 ```
 ```json
-Copiar código
 {
     "ano": 1980,
     "titulo": "Cruising Alterado",
@@ -77,7 +76,6 @@ URL: http://localhost:8080/api/filmes/{id}
 Request Body:
 ```
 ```json
-Copiar código
 {
     "ano": 1980,
     "titulo": "Cruising Alterado",
